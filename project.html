@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project | Signature Mike</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="/">
+          <span class="brand__name">Signature Mike</span>
+          <span class="brand__sub">Interiors & Gifts</span>
+        </a>
+        <button class="navbtn" id="navBtn">Menu</button>
+        <nav class="nav" id="nav">
+          <a class="nav__link" href="/">Home</a>
+          <a
+            class="nav__link"
+            href="/portfolio.html"
+            style="color: var(--accent-light)"
+            >Portfolio</a
+          >
+          <a class="nav__link" href="/about.html">About</a>
+          <a class="nav__link" href="/services.html">Services</a>
+          <a class="nav__link" href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--tint">
+        <div class="container section__head">
+          <div class="eyebrow">
+            <a
+              href="/portfolio.html"
+              style="color: inherit; text-decoration: none"
+              id="backLink"
+              >&larr; Back to Portfolio</a
+            >
+          </div>
+          <h1 class="h2" id="projectTitle">Loading...</h1>
+        </div>
+      </section>
+
+      <section class="section">
+        <div
+          class="container"
+          id="projectGallery"
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            align-items: center;
+          "
+        >
+          <!-- Images will be injected here -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <a class="footer-brand" href="/">Signature Mike</a>
+        <div class="footer-grid">
+          <div>
+            <h3 class="footer-title">Explore</h3>
+            <ul class="footer-links">
+              <li><a href="/portfolio.html">Portfolio</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="#">Press</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+            </ul>
+          </div>
+          <div style="grid-column: span 2">
+            <h3 class="footer-title">Visit Us</h3>
+            <p
+              style="
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 14px;
+                line-height: 1.6;
+              "
+            >
+              3505 Professional Circle<br />
+              Augusta, GA 30907<br />
+              In the Shops On Furys Ferry<br /><br />
+              <a href="mailto:Mike@SignatureMike.com" style="color: #fff"
+                >Mike@SignatureMike.com</a
+              ><br />
+              <a href="tel:+17064471503" style="color: #fff">706-447-1503</a>
+            </p>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <span
+            >&copy; <span id="year"></span> Signature Mike. All rights
+            reserved.</span
+          >
+          <span>Designed with precision.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="/script.js"></script>
+    <script type="module">
+      const params = new URLSearchParams(window.location.search);
+      const category = params.get('category');
+      const id = params.get('id');
+      const title = params.get('title');
+
+      document.getElementById('projectTitle').textContent = title || 'Project';
+
+      const backLink = document.getElementById('backLink');
+      backLink.href = '/portfolio.html';
+      backLink.innerHTML = '&larr; Back to Portfolio';
+
+      const gallery = document.getElementById('projectGallery');
+
+      const allImages = import.meta.glob('/assets/**/*.{jpeg,jpg,png,gif,webp}', { eager: true, query: '?url', import: 'default' });
+      
+      const projectImages = Object.keys(allImages)
+        .filter(path => path.includes(`/assets/${category}/${id}/`))
+        .sort();
+
+      if (category === 'BEFORE_AND_AFTER') {
+        const paddedId = id.padStart(2, '0');
+        for (let i = 1; i <= 2; i++) {
+          const wrapper = document.createElement('div');
+          wrapper.style.width = '100%';
+          wrapper.style.maxWidth = '1000px';
+
+          const label = document.createElement('h3');
+          label.textContent = i === 1 ? 'Before' : 'After';
+          label.style.fontFamily = 'var(--serif)';
+          label.style.fontSize = '24px';
+          label.style.marginBottom = '16px';
+          label.style.color = 'var(--accent)';
+
+          const expectedPath = `/assets/${category}/${id}/before_after_${paddedId}_00${i}.jpeg`;
+          const actualPath = allImages[expectedPath] || expectedPath;
+
+          const img = document.createElement('img');
+          img.src = actualPath;
+          img.style.width = '100%';
+          img.style.height = 'auto';
+          img.style.borderRadius = '8px';
+          img.style.boxShadow = '0 4px 20px rgba(0,0,0,0.05)';
+          img.alt = i === 1 ? 'Before' : 'After';
+
+          wrapper.appendChild(label);
+          wrapper.appendChild(img);
+          gallery.appendChild(wrapper);
+        }
+      } else {
+        if (projectImages.length > 0) {
+          projectImages.forEach((path, index) => {
+            const img = document.createElement('img');
+            img.src = allImages[path];
+            img.style.width = '100%';
+            img.style.maxWidth = '1000px';
+            img.style.height = 'auto';
+            img.style.borderRadius = '8px';
+            img.style.boxShadow = '0 4px 20px rgba(0,0,0,0.05)';
+            img.alt = `${title} - Image ${index + 1}`;
+
+            gallery.appendChild(img);
+          });
+        } else {
+          const p = document.createElement('p');
+          p.textContent = 'No images found for this project.';
+          gallery.appendChild(p);
+        }
+      }
+    </script>
+  </body>
+</html>
