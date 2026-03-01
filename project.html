@@ -15,13 +15,13 @@
   <body>
     <header class="header">
       <div class="container header__inner">
-        <a class="brand" href="/">
+        <a class="brand" href="index.html">
           <span class="brand__name">Signature Mike</span>
           <span class="brand__sub">Interiors & Gifts</span>
         </a>
         <button class="navbtn" id="navBtn">Menu</button>
         <nav class="nav" id="nav">
-          <a class="nav__link" href="/">Home</a>
+          <a class="nav__link" href="index.html">Home</a>
           <a
             class="nav__link"
             href="portfolio.html"
@@ -132,10 +132,10 @@
 
       const gallery = document.getElementById('projectGallery');
 
-      const allImages = import.meta.glob('/assets/**/*.{jpeg,jpg,png,gif,webp}', { eager: true, query: '?url', import: 'default' });
+      const allImages = import.meta.glob('assets/**/*.{jpeg,jpg,png,gif,webp}', { eager: true, query: '?url', import: 'default' });
       
       const projectImages = Object.keys(allImages)
-        .filter(path => path.includes(`/assets/${category}/${id}/`))
+        .filter(path => path.includes(`assets/${category}/${id}/`))
         .sort();
 
       if (category === 'BEFORE_AND_AFTER') {
