@@ -4,19 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | Signature Mike</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="/">
+      <a class="brand" href="index.html">
         <span class="brand__name">Signature Mike</span>
-        <span class="brand__sub">Interiors & Gifts</span>
       </a>
+
       <button class="navbtn" id="navBtn">Menu</button>
+
       <nav class="nav" id="nav">
         <a class="nav__link" href="index.html">Home</a>
         <a class="nav__link" href="portfolio.html">Portfolio</a>
@@ -28,97 +32,307 @@
   </header>
 
   <main>
+    <section class="section section--tint services-hero">
+      <div class="container services-hero__grid">
+        <div>
+          <div class="eyebrow">Design Services</div>
+          <h1 class="h2">Choose the right contract for your project.</h1>
+          <p class="p">
+            Michael offers three service options depending on the size and needs of your project. Choose the option that fits best, prepare your contract online, then print it, sign it, and bring it into the store with your deposit.
+          </p>
+
+          <div class="services-hero__actions">
+            <a class="btn btn--primary" href="contact.html">Prepare Your Contract</a>
+            <a class="btn btn--outline" href="#service-options">View Options</a>
+          </div>
+        </div>
+
+        <div class="services-summary-card">
+          <div class="services-summary-card__title">How it works</div>
+
+          <div class="services-step">
+            <span>01</span>
+            <p>Review the three service options.</p>
+          </div>
+
+          <div class="services-step">
+            <span>02</span>
+            <p>Fill out the printable contract form.</p>
+          </div>
+
+          <div class="services-step">
+            <span>03</span>
+            <p>Print, sign, and bring it to the store with your deposit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="service-options">
+      <div class="container">
+        <div class="section__head services-centered-head">
+          <div class="eyebrow">Contract Options</div>
+          <h2 class="h2">Select Your Service</h2>
+          <p class="p">
+            Each option has a minimum purchase and a non-refundable deposit that is applied toward the project.
+          </p>
+        </div>
+
+        <div class="services-contract-grid">
+
+          <article class="contract-service-card">
+            <div class="contract-service-card__top">
+              <div class="contract-service-card__label">Option 01</div>
+              <h3>Window Treatment Option</h3>
+              <p>
+                Best for clients who only need window treatments for their space.
+              </p>
+            </div>
+
+            <div class="contract-service-card__details">
+              <div>
+                <span>Minimum Purchase</span>
+                <strong>$1,000</strong>
+              </div>
+
+              <div>
+                <span>Deposit</span>
+                <strong>$500</strong>
+              </div>
+
+              <div>
+                <span>Deposit Type</span>
+                <strong>Non-refundable</strong>
+              </div>
+            </div>
+
+            <p class="contract-service-card__note">
+              The deposit will be used toward the project.
+            </p>
+
+            <a class="btn btn--primary" href="contact.html">Prepare Contract</a>
+          </article>
+
+          <article class="contract-service-card contract-service-card--featured">
+            <div class="contract-service-card__top">
+              <div class="contract-service-card__label">Option 02</div>
+              <h3>Interior Design Option</h3>
+              <p>
+                Best for larger design projects that include furniture, art, lamps, rugs, decor, and other selected pieces.
+              </p>
+            </div>
+
+            <div class="contract-service-card__details">
+              <div>
+                <span>Minimum Purchase</span>
+                <strong>$2,000</strong>
+              </div>
+
+              <div>
+                <span>Deposit</span>
+                <strong>$1,000</strong>
+              </div>
+
+              <div>
+                <span>Deposit Type</span>
+                <strong>Non-refundable</strong>
+              </div>
+            </div>
+
+            <p class="contract-service-card__note">
+              The deposit will be used toward the project.
+            </p>
+
+            <a class="btn btn--primary" href="contact.html">Prepare Contract</a>
+          </article>
+
+          <article class="contract-service-card">
+            <div class="contract-service-card__top">
+              <div class="contract-service-card__label">Option 03</div>
+              <h3>Consultation Option</h3>
+              <p>
+                Best for clients who need design guidance, meetings, drafting, phone calls, emails, texts, and planning help.
+              </p>
+            </div>
+
+            <div class="contract-service-card__details">
+              <div>
+                <span>Minimum Purchase</span>
+                <strong>$500</strong>
+              </div>
+
+              <div>
+                <span>Deposit</span>
+                <strong>$500</strong>
+              </div>
+
+              <div>
+                <span>Hourly Fee</span>
+                <strong>$75 / hour</strong>
+              </div>
+            </div>
+
+            <p class="contract-service-card__note">
+              The deposit is non-refundable and used toward the consultation fee.
+            </p>
+
+            <a class="btn btn--primary" href="contact.html">Prepare Contract</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
     <section class="section section--tint">
-      <div class="container section__head">
-        <div class="eyebrow">Design Services</div>
-        <h1 class="h2">Contracts and Pricing</h1>
-        <p class="p">Print and sign the contract that works for you and drop off at Mike’s office with your deposit to get on the calendar.</p>
-      </div>
-      <div class="container serviceRow">
-        <article class="service">
-          <div class="service__title">Window Treatments</div>
-          <div class="service__line">Minimum purchase: $1,000</div>
-          <div class="service__line">Deposit: $500 (non-refundable, applied toward project)</div>
-        </article>
+      <div class="container market-feature">
+        <div>
+          <div class="eyebrow">Special Opportunity</div>
+          <h2 class="h2">Furniture & Lighting Market Access</h2>
+          <p class="p">
+            If your project requires larger volumes of lighting, furniture, rugs, lamps, decor, or similar items, Michael offers a unique opportunity to help clients save money while exploring Furniture and Lighting Markets.
+          </p>
+          <p class="p">
+            This program works especially well for clients building a home, setting up a rental property, or creating a hospitality space.
+          </p>
+        </div>
 
-        <article class="service">
-          <div class="service__title">Interior Design Purchases</div>
-          <div class="service__line">Furniture, art, rug, accessory purchase</div>
-          <div class="service__line">Minimum purchase: $2,000</div>
-          <div class="service__line">Deposit: $1,000 (non-refundable, applied toward project)</div>
-        </article>
-
-        <article class="service">
-          <div class="service__title">Consultation Only</div>
-          <div class="service__line">$75 per hour (includes emails, texts and phone calls)</div>
-          <div class="service__line">Minimum purchase: $500</div>
-          <div class="service__line">Deposit: $500 (non-refundable)</div>
-        </article>
+        <div class="market-feature__box">
+          <div class="market-feature__number">CSRA</div>
+          <h3>A rare design experience</h3>
+          <p>
+            Clients can view a wide range of goods and selections while taking advantage of a special buying opportunity through Michael’s design process.
+          </p>
+        </div>
       </div>
-      
-      <div class="container" style="margin-top: 80px;">
-        <h2 class="h2" style="font-size: 32px; text-align: center; margin-bottom: 48px;">Our Process</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px;">
-          <div style="background: var(--paper); padding: 32px; border: 1px solid var(--line); text-align: center;">
-            <div style="font-family: var(--serif); font-size: 48px; color: var(--accent-light); margin-bottom: 16px;">01</div>
-            <h3 style="font-size: 18px; font-weight: 500; margin-bottom: 8px;">Consultation</h3>
-            <p style="font-size: 14px; color: var(--ink); opacity: 0.7;">Initial meeting to discuss your vision, budget, and timeline.</p>
-          </div>
-          <div style="background: var(--paper); padding: 32px; border: 1px solid var(--line); text-align: center;">
-            <div style="font-family: var(--serif); font-size: 48px; color: var(--accent-light); margin-bottom: 16px;">02</div>
-            <h3 style="font-size: 18px; font-weight: 500; margin-bottom: 8px;">Design</h3>
-            <p style="font-size: 14px; color: var(--ink); opacity: 0.7;">Creating the perfect plan with curated selections and layouts.</p>
-          </div>
-          <div style="background: var(--paper); padding: 32px; border: 1px solid var(--line); text-align: center;">
-            <div style="font-family: var(--serif); font-size: 48px; color: var(--accent-light); margin-bottom: 16px;">03</div>
-            <h3 style="font-size: 18px; font-weight: 500; margin-bottom: 8px;">Installation</h3>
-            <p style="font-size: 14px; color: var(--ink); opacity: 0.7;">Bringing the design to life with professional execution.</p>
-          </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head services-centered-head">
+          <div class="eyebrow">Process</div>
+          <h2 class="h2">From contract to calendar</h2>
+          <p class="p">
+            The process is simple. Choose your service option, prepare your contract, then bring it into the store with your deposit.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="process-card__number">01</div>
+            <h3>Choose</h3>
+            <p>Select the contract option that best fits your project needs.</p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-card__number">02</div>
+            <h3>Prepare</h3>
+            <p>Fill out the online contract form and preview your printable copy.</p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-card__number">03</div>
+            <h3>Print</h3>
+            <p>Print the completed contract or save it as a PDF for your records.</p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-card__number">04</div>
+            <h3>Schedule</h3>
+            <p>Bring the signed contract and deposit into the store to get on Michael’s calendar.</p>
+          </article>
+        </div>
+
+        <div class="services-final-cta">
+          <h2>Ready to get started?</h2>
+          <p>Prepare your contract online, print it, sign it, and bring it into Signature Interiors & Gifts with your deposit.</p>
+          <a class="btn btn--primary" href="contact.html">Prepare Your Contract</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <a class="footer-brand" href="/">Signature Mike</a>
-      <div class="footer-grid">
-        <div>
-          <h3 class="footer-title">Explore</h3>
-          <ul class="footer-links">
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-title">Company</h3>
-          <ul class="footer-links">
-            <li><a href="#">Press</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
-          </ul>
-        </div>
-        <div style="grid-column: span 2;">
-          <h3 class="footer-title">Visit Us</h3>
-          <p style="color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.6;">
-            3505 Professional Circle<br />
-            Augusta, GA 30907<br />
-            In the Shops On Furys Ferry<br /><br />
-            <a href="mailto:Mike@SignatureMike.com" style="color: #fff;">Mike@SignatureMike.com</a><br />
-            <a href="tel:+17064471503" style="color: #fff;">706-447-1503</a>
-          </p>
-        </div>
+  <div class="container">
+    <a class="footer-brand" href="index.html">Signature Mike</a>
+
+    <div class="footer-grid footer-grid--newsletter">
+      <div>
+        <h3 class="footer-title">Explore</h3>
+        <ul class="footer-links">
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <span>&copy; <span id="year"></span> Signature Mike. All rights reserved.</span>
-        <span>Designed with precision.</span>
+
+      <div>
+        <h3 class="footer-title">Company</h3>
+        <ul class="footer-links">
+          <li><a href="press.html">Press</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-use.html">Terms of Use</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Visit Us</h3>
+        <p class="footer-contact">
+          3505 Professional Circle<br />
+          Augusta, GA 30907<br />
+          In the Shops On Furys Ferry<br /><br />
+          <a href="mailto:Mike@SignatureMike.com">Mike@SignatureMike.com</a><br />
+          <a href="tel:+17064471503">706-447-1503</a>
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Newsletter</h3>
+        <p class="footer-newsletter-text">
+          Subscribe for design updates, project highlights, store news, and special Signature Mike announcements.
+        </p>
+
+        <form
+          class="footer-newsletter"
+          name="newsletter"
+          method="POST"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="newsletter" />
+
+          <label class="sr-only" for="newsletterEmail">Email Address</label>
+
+          <div class="footer-newsletter__row">
+            <input
+              id="newsletterEmail"
+              class="footer-newsletter__input"
+              type="email"
+              name="email"
+              placeholder="Email address"
+              required
+            />
+
+            <button class="footer-newsletter__button" type="submit">
+              Sign Up
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-  </footer>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Signature Mike. All rights reserved.</span>
+      <span>
+        Designed and developed by
+        <a href="https://www.jcorales.art" style="color: rgb(226, 177, 43);" target="_blank">JCorales Creative</a>.
+      </span>
+    </div>
+  </div>
+</footer>
+
   <script src="script.js"></script>
 </body>
 </html>

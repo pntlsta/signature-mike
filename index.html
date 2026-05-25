@@ -17,7 +17,6 @@
       <div class="container header__inner">
         <a class="brand" href="index.html">
           <span class="brand__name">Signature Mike</span>
-          <span class="brand__sub">Interiors & Gifts</span>
         </a>
         <button class="navbtn" id="navBtn">Menu</button>
         <nav class="nav" id="nav">
@@ -125,7 +124,7 @@
           </div>
           <div class="split__media">
             <img
-              src="assets\MORE_PROJECTS\banks_patio\banks_patio2.png"
+              src="assets/mike-siewert-cover.png"
               alt="Interior Design"
               style="width: 100%; aspect-ratio: 4/5; object-fit: cover"
             />
@@ -161,7 +160,7 @@
         </div>
         <div class="container" style="margin-top: 48px; text-align: center">
           <p>Ready for some WOW?</p>
-          <a href="/services.html" class="btn btn--primary"
+          <a href="services.html" class="btn btn--primary"
             >View All Services</a
           >
         </div>
@@ -169,56 +168,86 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <a class="footer-brand" href="/">Signature Mike</a>
-        <div class="footer-grid">
-          <div>
-            <h3 class="footer-title">Explore</h3>
-            <ul class="footer-links">
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="footer-title">Company</h3>
-            <ul class="footer-links">
-              <li><a href="#">Press</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Use</a></li>
-            </ul>
-          </div>
-          <div style="grid-column: span 2">
-            <h3 class="footer-title">Visit Us</h3>
-            <p
-              style="
-                color: rgba(255, 255, 255, 0.7);
-                font-size: 14px;
-                line-height: 1.6;
-              "
-            >
-              3505 Professional Circle<br />
-              Augusta, GA 30907<br />
-              In the Shops On Furys Ferry<br /><br />
-              <a href="mailto:Mike@SignatureMike.com" style="color: #fff"
-                >Mike@SignatureMike.com</a
-              ><br />
-              <a href="tel:+17064471503" style="color: #fff">706-447-1503</a>
-            </p>
-          </div>
-        </div>
-        <div class="footer-divider"></div>
-        <div class="footer-bottom">
-          <span
-            >&copy; <span id="year"></span> Signature Mike. All rights
-            reserved.</span
-          >
-          <span>Designed and developed by <a href="https://www.jcorales.art" style="color: rgb(226, 177, 43);" target="_blank">JCorales Creative</a>.</span>
-        </div>
+  <div class="container">
+    <a class="footer-brand" href="index.html">Signature Mike</a>
+
+    <div class="footer-grid footer-grid--newsletter">
+      <div>
+        <h3 class="footer-title">Explore</h3>
+        <ul class="footer-links">
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-    </footer>
+
+      <div>
+        <h3 class="footer-title">Company</h3>
+        <ul class="footer-links">
+          <li><a href="press.html">Press</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-use.html">Terms of Use</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Visit Us</h3>
+        <p class="footer-contact">
+          3505 Professional Circle<br />
+          Augusta, GA 30907<br />
+          In the Shops On Furys Ferry<br /><br />
+          <a href="mailto:Mike@SignatureMike.com">Mike@SignatureMike.com</a><br />
+          <a href="tel:+17064471503">706-447-1503</a>
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Newsletter</h3>
+        <p class="footer-newsletter-text">
+          Subscribe for design updates, project highlights, store news, and special Signature Mike announcements.
+        </p>
+
+        <form
+          class="footer-newsletter"
+          name="newsletter"
+          method="POST"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="newsletter" />
+
+          <label class="sr-only" for="newsletterEmail">Email Address</label>
+
+          <div class="footer-newsletter__row">
+            <input
+              id="newsletterEmail"
+              class="footer-newsletter__input"
+              type="email"
+              name="email"
+              placeholder="Email address"
+              required
+            />
+
+            <button class="footer-newsletter__button" type="submit">
+              Sign Up
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Signature Mike. All rights reserved.</span>
+      <span>
+        Designed and developed by
+        <a href="https://www.jcorales.art" style="color: rgb(226, 177, 43);" target="_blank">JCorales Creative</a>.
+      </span>
+    </div>
+  </div>
+</footer>
     <script src="script.js"></script>
   </body>
 </html>

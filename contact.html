@@ -4,19 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Signature Mike</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="header">
     <div class="container header__inner">
       <a class="brand" href="index.html">
         <span class="brand__name">Signature Mike</span>
-        <span class="brand__sub">Interiors & Gifts</span>
       </a>
+
       <button class="navbtn" id="navBtn">Menu</button>
+
       <nav class="nav" id="nav">
         <a class="nav__link" href="index.html">Home</a>
         <a class="nav__link" href="portfolio.html">Portfolio</a>
@@ -33,89 +37,346 @@
         <div class="split__content">
           <div class="eyebrow">Contact</div>
           <h1 class="h2">Signature Interiors & Gifts</h1>
-          
-          <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 24px;">
+
+          <p class="p">
+            Choose the contract option that works best for your project. Fill out your information, preview the contract, then print it or save it as a PDF. Bring the signed contract into the store with your deposit to get on Michael’s calendar.
+          </p>
+
+          <div class="contact-info-block">
             <div>
-              <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 8px;">Email</div>
-              <a href="mailto:Mike@SignatureMike.com" style="font-size: 18px; color: var(--ink);">Mike@SignatureMike.com</a>
+              <div class="contact-info-label">Email</div>
+              <a href="mailto:Mike@SignatureMike.com" class="contact-info-link">Mike@SignatureMike.com</a>
             </div>
+
             <div>
-              <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 8px;">Phone</div>
-              <a href="tel:+17064471503" style="font-size: 18px; color: var(--ink);">706-447-1503</a>
+              <div class="contact-info-label">Phone</div>
+              <a href="tel:+17064471503" class="contact-info-link">706-447-1503</a>
             </div>
+
             <div>
-              <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 8px;">Address</div>
-              <div style="font-size: 16px; line-height: 1.6; color: var(--ink);">
+              <div class="contact-info-label">Address</div>
+              <div class="contact-info-text">
                 3505 Professional Circle<br />
                 Augusta, GA 30907<br />
                 In the Shops On Furys Ferry
               </div>
             </div>
           </div>
+
+          <div class="market-note">
+            <div class="market-note__title">Furniture & Lighting Market Opportunity</div>
+            <p>
+              If your project requires larger volumes of lighting, furniture, rugs, lamps, decor, or similar items, Michael offers a unique opportunity to help clients save money while exploring Furniture and Lighting Markets. This option works especially well for new builds, rental properties, and hospitality spaces.
+            </p>
+          </div>
         </div>
 
         <div>
-          <form class="form" action="#" method="post">
-            <div class="form__title">Send a message</div>
+          <form class="form contract-form" id="contractForm">
+            <div class="form__title">Prepare Your Contract</div>
+
             <label class="form__field">
-              <span class="form__label">Name</span>
-              <input class="form__input" type="text" name="name" placeholder="Your name" required />
+              <span class="form__label">Contract Option</span>
+              <select class="form__input" name="contractOption" id="contractOption" required>
+                <option value="">Choose an option</option>
+                <option value="window">Window Treatment Option</option>
+                <option value="interior">Interior Design Option</option>
+                <option value="consultation">Consultation Option</option>
+              </select>
             </label>
+
+            <label class="form__field">
+              <span class="form__label">Full Name</span>
+              <input class="form__input" type="text" name="clientName" id="clientName" placeholder="Your full name" required />
+            </label>
+
             <label class="form__field">
               <span class="form__label">Email</span>
-              <input class="form__input" type="email" name="email" placeholder="you@email.com" required />
+              <input class="form__input" type="email" name="clientEmail" id="clientEmail" placeholder="you@email.com" required />
             </label>
+
             <label class="form__field">
-              <span class="form__label">Message</span>
-              <textarea class="form__textarea" name="message" rows="5" placeholder="Tell Mike about your space, timeline, and budget..." required></textarea>
+              <span class="form__label">Phone</span>
+              <input class="form__input" type="tel" name="clientPhone" id="clientPhone" placeholder="Your phone number" required />
             </label>
-            <button class="btn btn--primary" type="submit" style="margin-top: 16px;">Send Message</button>
+
+            <label class="form__field">
+              <span class="form__label">Project Address</span>
+              <input class="form__input" type="text" name="projectAddress" id="projectAddress" placeholder="Project address" />
+            </label>
+
+            <label class="form__field">
+              <span class="form__label">Project Notes</span>
+              <textarea class="form__textarea" name="projectNotes" id="projectNotes" rows="5" placeholder="Tell Michael about your space, timeline, and project needs..."></textarea>
+            </label>
+
+            <div class="contract-actions">
+              <button class="btn btn--primary" type="submit">Preview Contract</button>
+              <button class="btn btn--outline" type="button" id="printContractBtn" disabled>Print / Save as PDF</button>
+            </div>
+
+            <p class="contract-helper">
+              Nothing is submitted online. This form only prepares a printable contract for you to sign and bring into the store.
+            </p>
           </form>
         </div>
+      </div>
+    </section>
+
+    <section class="section contract-preview-section" id="contractPreviewSection" hidden>
+      <div class="container">
+        <div class="section__head">
+          <div class="eyebrow">Preview</div>
+          <h2 class="h2">Your Contract Preview</h2>
+          <p class="p">
+            Review your information below. If everything looks correct, click Print / Save as PDF.
+          </p>
+        </div>
+
+        <article class="print-contract" id="printContract">
+          <div class="print-contract__header">
+            <div>
+              <div class="print-contract__brand">Signature Mike</div>
+              <div class="print-contract__sub">Signature Interiors & Gifts</div>
+            </div>
+
+            <div class="print-contract__store">
+              3505 Professional Circle<br />
+              Augusta, GA 30907<br />
+              706-447-1503
+            </div>
+          </div>
+
+          <div class="print-contract__intro">
+            <h2 id="previewContractTitle">Contract Option</h2>
+            <p>
+              There are three options and contracts when it comes to hiring Michael to work on your project. Please find the option that works best for you, print out the contract associated with that option, sign the contract, and bring it into the store along with your deposit.
+            </p>
+          </div>
+
+          <div class="print-contract__grid">
+            <div>
+              <div class="print-label">Client Name</div>
+              <div class="print-value" id="previewName"></div>
+            </div>
+
+            <div>
+              <div class="print-label">Date Prepared</div>
+              <div class="print-value" id="previewDate"></div>
+            </div>
+
+            <div>
+              <div class="print-label">Email</div>
+              <div class="print-value" id="previewEmail"></div>
+            </div>
+
+            <div>
+              <div class="print-label">Phone</div>
+              <div class="print-value" id="previewPhone"></div>
+            </div>
+
+            <div class="print-contract__full">
+              <div class="print-label">Project Address</div>
+              <div class="print-value" id="previewAddress"></div>
+            </div>
+
+            <div class="print-contract__full">
+              <div class="print-label">Project Notes</div>
+              <div class="print-value print-value--notes" id="previewNotes"></div>
+            </div>
+          </div>
+
+          <div class="print-contract__agreement">
+            <h3>Agreement</h3>
+            <p id="previewAgreement"></p>
+            <p id="previewDeposit"></p>
+          </div>
+
+          <div class="print-contract__signature">
+            <div>
+              <div class="signature-line"></div>
+              <div class="print-label">Agreed / Client Signature</div>
+            </div>
+
+            <div>
+              <div class="signature-line"></div>
+              <div class="print-label">Date</div>
+            </div>
+          </div>
+
+          <div class="print-contract__footer">
+            Please bring this signed contract into the store with your deposit to get on Michael’s calendar.
+          </div>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <a class="footer-brand" href="index.html">Signature Mike</a>
-      <div class="footer-grid">
-        <div>
-          <h3 class="footer-title">Explore</h3>
-          <ul class="footer-links">
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-title">Company</h3>
-          <ul class="footer-links">
-            <li><a href="#">Press</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
-          </ul>
-        </div>
-        <div style="grid-column: span 2;">
-          <h3 class="footer-title">Visit Us</h3>
-          <p style="color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.6;">
-            3505 Professional Circle<br />
-            Augusta, GA 30907<br />
-            In the Shops On Furys Ferry<br /><br />
-            <a href="mailto:Mike@SignatureMike.com" style="color: #fff;">Mike@SignatureMike.com</a><br />
-            <a href="tel:+17064471503" style="color: #fff;">706-447-1503</a>
-          </p>
-        </div>
+  <div class="container">
+    <a class="footer-brand" href="index.html">Signature Mike</a>
+
+    <div class="footer-grid footer-grid--newsletter">
+      <div>
+        <h3 class="footer-title">Explore</h3>
+        <ul class="footer-links">
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <span>&copy; <span id="year"></span> Signature Mike. All rights reserved.</span>
-        <span>Designed and developed by <a href="https://www.jcorales.art" style="color: rgb(226, 177, 43);" target="_blank">JCorales Creative</a>.</span>
+
+      <div>
+        <h3 class="footer-title">Company</h3>
+        <ul class="footer-links">
+          <li><a href="press.html">Press</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-use.html">Terms of Use</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Visit Us</h3>
+        <p class="footer-contact">
+          3505 Professional Circle<br />
+          Augusta, GA 30907<br />
+          In the Shops On Furys Ferry<br /><br />
+          <a href="mailto:Mike@SignatureMike.com">Mike@SignatureMike.com</a><br />
+          <a href="tel:+17064471503">706-447-1503</a>
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Newsletter</h3>
+        <p class="footer-newsletter-text">
+          Subscribe for design updates, project highlights, store news, and special Signature Mike announcements.
+        </p>
+
+        <form
+          class="footer-newsletter"
+          name="newsletter"
+          method="POST"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="newsletter" />
+
+          <label class="sr-only" for="newsletterEmail">Email Address</label>
+
+          <div class="footer-newsletter__row">
+            <input
+              id="newsletterEmail"
+              class="footer-newsletter__input"
+              type="email"
+              name="email"
+              placeholder="Email address"
+              required
+            />
+
+            <button class="footer-newsletter__button" type="submit">
+              Sign Up
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-  </footer>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Signature Mike. All rights reserved.</span>
+      <span>
+        Designed and developed by
+        <a href="https://www.jcorales.art" style="color: rgb(226, 177, 43);" target="_blank">JCorales Creative</a>.
+      </span>
+    </div>
+  </div>
+</footer>
+
   <script src="script.js"></script>
+
+  <script>
+    const contractOptions = {
+      window: {
+        title: "Window Treatment Option",
+        agreement: "I understand that Michael’s window treatment only option has a minimum purchase of $1,000.",
+        deposit: "The deposit is $500, non-refundable, and will be used toward the project."
+      },
+      interior: {
+        title: "Interior Design Option",
+        agreement: "I understand that Michael’s design option has a minimum purchase of $2,000. This includes design that specifies furniture, art, lamps, rugs, decor, and related items.",
+        deposit: "The deposit is $1,000, non-refundable, and will be used toward the project."
+      },
+      consultation: {
+        title: "Consultation Option",
+        agreement: "I understand that Michael’s consultation only option has a minimum purchase of $500.",
+        deposit: "The deposit is $500, non-refundable, and will be used toward the $75 an hour fee. This includes any and all communication, including meetings, drafting, designing, texts, emails, phone calls, and related communication."
+      }
+    };
+
+    const contractForm = document.getElementById("contractForm");
+    const contractPreviewSection = document.getElementById("contractPreviewSection");
+    const printContractBtn = document.getElementById("printContractBtn");
+
+    const previewContractTitle = document.getElementById("previewContractTitle");
+    const previewName = document.getElementById("previewName");
+    const previewDate = document.getElementById("previewDate");
+    const previewEmail = document.getElementById("previewEmail");
+    const previewPhone = document.getElementById("previewPhone");
+    const previewAddress = document.getElementById("previewAddress");
+    const previewNotes = document.getElementById("previewNotes");
+    const previewAgreement = document.getElementById("previewAgreement");
+    const previewDeposit = document.getElementById("previewDeposit");
+
+    function getValue(id) {
+      return document.getElementById(id).value.trim();
+    }
+
+    function getToday() {
+      const today = new Date();
+
+      return today.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+    }
+
+    function fillContractPreview() {
+      const selectedOption = getValue("contractOption");
+      const contract = contractOptions[selectedOption];
+
+      if (!contract) return;
+
+      previewContractTitle.textContent = contract.title;
+      previewName.textContent = getValue("clientName") || "Not provided";
+      previewDate.textContent = getToday();
+      previewEmail.textContent = getValue("clientEmail") || "Not provided";
+      previewPhone.textContent = getValue("clientPhone") || "Not provided";
+      previewAddress.textContent = getValue("projectAddress") || "Not provided";
+      previewNotes.textContent = getValue("projectNotes") || "No project notes provided.";
+      previewAgreement.textContent = contract.agreement;
+      previewDeposit.textContent = contract.deposit;
+
+      contractPreviewSection.hidden = false;
+      printContractBtn.disabled = false;
+
+      contractPreviewSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
+    contractForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      fillContractPreview();
+    });
+
+    printContractBtn.addEventListener("click", function() {
+      fillContractPreview();
+      window.print();
+    });
+  </script>
 </body>
 </html>

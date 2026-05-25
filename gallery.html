@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Signature Mike</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="gallery-page">
+
+    <section class="gallery-hero">
+      <p class="eyebrow">Signature Mike</p>
+      <h1 id="pageTitle">Gallery</h1>
+      <p id="pageIntro">
+        Explore selected spaces, behind-the-scenes moments, and finished design projects.
+      </p>
+    </section>
+
+    <section id="galleryBreadcrumb" class="gallery-breadcrumb" hidden>
+      <a href="gallery.html">Gallery</a>
+      <span>/</span>
+      <span id="breadcrumbTitle"></span>
+    </section>
+
+    <section id="albumGrid" class="album-grid"></section>
+
+    <section id="projectView" class="project-view" hidden>
+      <div class="project-header">
+        <a class="back-link" href="gallery.html">← Back to Gallery</a>
+        <p id="projectAlbum" class="project-album"></p>
+        <h2 id="projectTitle"></h2>
+        <p id="projectDescription"></p>
+      </div>
+
+      <div id="beforeAfterGrid" class="before-after-grid"></div>
+
+      <div id="projectPhotoGrid" class="project-photo-grid"></div>
+    </section>
+
+  </main>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close image">×</button>
+    <button class="lightbox-prev" aria-label="Previous image">‹</button>
+    <img id="lightboxImage" src="" alt="" />
+    <button class="lightbox-next" aria-label="Next image">›</button>
+  </div>
+
+  <script>
+    const DATA_FILE = "gallery-data.json";
+
+    const albumGrid = document.getElementById("albumGrid");
+    const projectView = document.getElementById("projectView");
+    const pageTitle = document.getElementById("pageTitle");
+    const pageIntro = document.getElementById("pageIntro");
+    const galleryBreadcrumb = document.getElementById("galleryBreadcrumb");
+    const breadcrumbTitle = document.getElementById("breadcrumbTitle");
+
+    const projectAlbum = document.getElementById("projectAlbum");
+    const projectTitle = document.getElementById("projectTitle");
+    const projectDescription = document.getElementById("projectDescription");
+    const projectPhotoGrid = document.getElementById("projectPhotoGrid");
+    const beforeAfterGrid = document.getElementById("beforeAfterGrid");
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const closeLightboxBtn = document.querySelector(".lightbox-close");
+    const prevLightboxBtn = document.querySelector(".lightbox-prev");
+    const nextLightboxBtn = document.querySelector(".lightbox-next");
+
+    let currentImages = [];
+    let currentImageIndex = 0;
+
+    function getProjectSlug() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("project");
+    }
+
+    function formatTitle(slug) {
+      return slug
+        .replaceAll("_", " ")
+        .replace(/\b\w/g, char => char.toUpperCase());
+    }
+
+    function buildImagePath(project, index) {
+      const number = String(index).padStart(3, "0");
+
+      return `assets/${project.album}/${project.folder}/${project.folder}_${number}.jpeg`;
+    }
+
+    function buildCoverPath(project) {
+      if (project.cover) return project.cover;
+      return buildImagePath(project, 1);
+    }
+
+    function buildBeforeAfterPath(folderNumber, imageNumber) {
+      const folder = `before_after_${String(folderNumber).padStart(2, "0")}`;
+      const number = String(imageNumber).padStart(3, "0");
+
+      return `assets/BEFORE_AFTER/${folder}/${folder}_${number}.jpeg`;
+    }
+
+    function openLightbox(images, index) {
+      currentImages = images;
+      currentImageIndex = index;
+      lightboxImage.src = currentImages[currentImageIndex];
+      lightbox.hidden = false;
+      document.body.classList.add("no-scroll");
+    }
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      lightboxImage.src = "";
+      document.body.classList.remove("no-scroll");
+    }
+
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+      lightboxImage.src = currentImages[currentImageIndex];
+    }
+
+    function showPrevImage() {
+      currentImageIndex =
+        (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+      lightboxImage.src = currentImages[currentImageIndex];
+    }
+
+    function renderGallery(projects) {
+      albumGrid.hidden = false;
+      projectView.hidden = true;
+      galleryBreadcrumb.hidden = true;
+
+      pageTitle.textContent = "Gallery";
+      pageIntro.textContent =
+        "Explore selected spaces, behind-the-scenes moments, and finished design projects.";
+
+      albumGrid.innerHTML = projects.map(project => {
+        const title = project.title || formatTitle(project.folder);
+        const cover = buildCoverPath(project);
+
+        return `
+          <a class="album-card" href="gallery.html?project=${project.slug}">
+            <img src="${cover}" alt="${title}" loading="lazy">
+            <div class="album-card-content">
+              <p>${project.albumLabel}</p>
+              <h2>${title}</h2>
+            </div>
+          </a>
+        `;
+      }).join("");
+    }
+
+    function renderProject(project) {
+      albumGrid.hidden = true;
+      projectView.hidden = false;
+      galleryBreadcrumb.hidden = false;
+
+      const title = project.title || formatTitle(project.folder);
+
+      pageTitle.textContent = title;
+      pageIntro.textContent = project.description || "A closer look at this project.";
+      breadcrumbTitle.textContent = title;
+
+      projectAlbum.textContent = project.albumLabel;
+      projectTitle.textContent = title;
+      projectDescription.textContent = project.description || "";
+
+      const images = [];
+
+      for (let i = 1; i <= project.photoCount; i++) {
+        images.push(buildImagePath(project, i));
+      }
+
+      projectPhotoGrid.innerHTML = images.map((src, index) => {
+        return `
+          <button class="project-photo" type="button" data-index="${index}">
+            <img src="${src}" alt="${title} photo ${index + 1}" loading="lazy">
+          </button>
+        `;
+      }).join("");
+
+      document.querySelectorAll(".project-photo").forEach(button => {
+        button.addEventListener("click", () => {
+          const index = Number(button.dataset.index);
+          openLightbox(images, index);
+        });
+      });
+
+      beforeAfterGrid.innerHTML = "";
+
+      if (project.beforeAfter) {
+        const baImages = [];
+
+        for (let i = 1; i <= project.beforeAfter.photoCount; i++) {
+          baImages.push(buildBeforeAfterPath(project.beforeAfter.folderNumber, i));
+        }
+
+        beforeAfterGrid.innerHTML = `
+          <div class="before-after-heading">
+            <h3>Before & After</h3>
+            <p>See the transformation for this project.</p>
+          </div>
+
+          <div class="before-after-photos">
+            ${baImages.map((src, index) => `
+              <button class="before-after-photo" type="button" data-ba-index="${index}">
+                <img src="${src}" alt="${title} before and after ${index + 1}" loading="lazy">
+              </button>
+            `).join("")}
+          </div>
+        `;
+
+        document.querySelectorAll(".before-after-photo").forEach(button => {
+          button.addEventListener("click", () => {
+            const index = Number(button.dataset.baIndex);
+            openLightbox(baImages, index);
+          });
+        });
+      }
+    }
+
+    async function initGallery() {
+      try {
+        const response = await fetch(DATA_FILE);
+        const projects = await response.json();
+
+        const projectSlug = getProjectSlug();
+        const selectedProject = projects.find(project => project.slug === projectSlug);
+
+        if (projectSlug && selectedProject) {
+          renderProject(selectedProject);
+        } else {
+          renderGallery(projects);
+        }
+      } catch (error) {
+        albumGrid.innerHTML = `
+          <div class="gallery-error">
+            <h2>Gallery could not load.</h2>
+            <p>Please check that gallery-data.json is in the same folder as gallery.html.</p>
+          </div>
+        `;
+      }
+    }
+
+    closeLightboxBtn.addEventListener("click", closeLightbox);
+    nextLightboxBtn.addEventListener("click", showNextImage);
+    prevLightboxBtn.addEventListener("click", showPrevImage);
+
+    lightbox.addEventListener("click", event => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (lightbox.hidden) return;
+
+      if (event.key === "Escape") closeLightbox();
+      if (event.key === "ArrowRight") showNextImage();
+      if (event.key === "ArrowLeft") showPrevImage();
+    });
+
+    initGallery();
+  </script>
+
+</body>
+</html>
