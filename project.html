@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,16 +8,18 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="index.html">
-        <span class="brand__name">Signature Mike</span>
+      <a class="brand brand--logo" href="index.html" aria-label="Signature Mike Home">
+        <img src="assets/signature_mike_logo.png" alt="Signature Mike" class="brand__logo">
       </a>
 
       <button class="navbtn" id="navBtn">Menu</button>
@@ -27,6 +30,7 @@
         <a class="nav__link" href="about.html">About</a>
         <a class="nav__link" href="services.html">Services</a>
         <a class="nav__link" href="contact.html">Contact</a>
+        <a class="nav__link nav__link--show" href="signature-mike-show.html">Signature Mike Show</a>
       </nav>
     </div>
   </header>
@@ -56,533 +60,554 @@
   </main>
 
   <footer class="site-footer">
-  <div class="container">
-    <a class="footer-brand" href="index.html">Signature Mike</a>
+    <div class="container">
+      <a class="footer-brand" href="index.html">Signature Mike</a>
 
-    <div class="footer-grid footer-grid--newsletter">
-      <div>
-        <h3 class="footer-title">Explore</h3>
-        <ul class="footer-links">
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <div class="footer-grid footer-grid--newsletter">
+        <div>
+          <h3 class="footer-title">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="signature-mike-show.html">Signature Mike Show</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
 
-      <div>
-        <h3 class="footer-title">Company</h3>
-        <ul class="footer-links">
-          <li><a href="press.html">Press</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="terms-of-use.html">Terms of Use</a></li>
-        </ul>
-      </div>
+        <div>
+          <h3 class="footer-title">Company</h3>
+          <ul class="footer-links">
+            <li><a href="press.html">Press</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+          </ul>
+        </div>
 
-      <div>
-        <h3 class="footer-title">Visit Us</h3>
-        <p class="footer-contact">
-          3505 Professional Circle<br />
-          Augusta, GA 30907<br />
-          In the Shops On Furys Ferry<br /><br />
-          <a href="mailto:Mike@SignatureMike.com">Mike@SignatureMike.com</a><br />
-          <a href="tel:+17064471503">706-447-1503</a>
-        </p>
-      </div>
+        <div>
+          <h3 class="footer-title">Visit Us</h3>
 
-      <div>
-        <h3 class="footer-title">Newsletter</h3>
-        <p class="footer-newsletter-text">
-          Subscribe for design updates, project highlights, store news, and special Signature Mike announcements.
-        </p>
+          <p class="footer-contact">
+            <a href="https://www.google.com/maps/search/?api=1&query=3505+Professional+Circle+Augusta+GA+30907"
+              target="_blank" rel="noopener">
+              3505 Professional Circle<br />
+              Augusta, GA 30907<br />
+              In the Shops On Furys Ferry
+            </a>
+            <br /><br />
 
-        <form
-          class="footer-newsletter"
-          name="newsletter"
-          method="POST"
-          data-netlify="true"
-        >
-          <input type="hidden" name="form-name" value="newsletter" />
+            <a href="mailto:Mike@SignatureMike.com">Mike@SignatureMike.com</a><br />
+            <a href="tel:+17064471503">706-447-1503</a>
+          </p>
 
-          <label class="sr-only" for="newsletterEmail">Email Address</label>
+          <div class="footer-socials" aria-label="Signature Mike social links">
+            <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
 
-          <div class="footer-newsletter__row">
-            <input
-              id="newsletterEmail"
-              class="footer-newsletter__input"
-              type="email"
-              name="email"
-              placeholder="Email address"
-              required
-            />
+            <a href="#" aria-label="TikTok" target="_blank" rel="noopener">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
 
-            <button class="footer-newsletter__button" type="submit">
-              Sign Up
-            </button>
+            <a href="https://www.youtube.com/@signaturemike6053" aria-label="YouTube" target="_blank" rel="noopener">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" aria-label="X" target="_blank" rel="noopener">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
           </div>
-        </form>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Newsletter</h3>
+          <p class="footer-newsletter-text">
+            Subscribe for design updates, project highlights, store news, show features, and special Signature Mike
+            announcements.
+          </p>
+
+          <form class="footer-newsletter" name="newsletter" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="newsletter" />
+
+            <label class="sr-only" for="newsletterEmail">Email Address</label>
+
+            <div class="footer-newsletter__row">
+              <input id="newsletterEmail" class="footer-newsletter__input" type="email" name="email"
+                placeholder="Email address" required />
+
+              <button class="footer-newsletter__button" type="submit">
+                Sign Up
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <span>
+          &copy; <span id="year"></span>
+          <a href="index.html">Signature Mike</a>. All rights reserved.
+        </span>
+
+        <span>
+          Designed and developed by
+          <a href="https://www.jcorales.art" target="_blank" rel="noopener">JCorales Creative</a>.
+        </span>
       </div>
     </div>
-
-    <div class="footer-divider"></div>
-
-    <div class="footer-bottom">
-      <span>&copy; <span id="year"></span> Signature Mike. All rights reserved.</span>
-      <span>
-        Designed and developed by
-        <a href="https://www.jcorales.art" style="color: rgb(226, 177, 43);" target="_blank">JCorales Creative</a>.
-      </span>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <script src="script.js"></script>
 
   <script>
-  const PROJECTS = [
-    {
-      category: "PROJECT_PHOTOS",
-      label: "Project Photos",
-      id: "atc_model",
-      title: "ATC Model",
-      description: "A finished interior project with curated design details, styled spaces, and a polished Signature Mike look.",
-      photoCount: 5
-    },
-    {
-      category: "PROJECT_PHOTOS",
-      label: "Project Photos",
-      id: "davidson_bedroom",
-      title: "Davidson Bedroom",
-      description: "A bedroom project designed with comfort, balance, and layered interior styling.",
-      photoCount: 5
-    },
-    {
-      category: "PROJECT_PHOTOS",
-      label: "Project Photos",
-      id: "gloria_bath",
-      title: "Gloria Bath",
-      description: "A bathroom project with clean finishes, thoughtful details, and a refined final look.",
-      photoCount: 5
-    },
-    {
-      category: "PROJECT_PHOTOS",
-      label: "Project Photos",
-      id: "grant_foyer",
-      title: "Grant Foyer",
-      description: "A foyer design created to make a strong, elegant, and welcoming first impression.",
-      photoCount: 5
-    },
-    {
-      category: "PROJECT_PHOTOS",
-      label: "Project Photos",
-      id: "others",
-      title: "Others",
-      description: "Additional Signature Mike project photos, selected details, and finished design moments.",
-      photoCount: 5
-    },
-    {
-      category: "PROJECT_PHOTOS",
-      label: "Project Photos",
-      id: "pruitt_dining",
-      title: "Pruitt Dining",
-      description: "A dining room project with warm styling, finished details, and an inviting atmosphere.",
-      photoCount: 5
-    },
-    {
-      category: "PROJECT_PHOTOS",
-      label: "Project Photos",
-      id: "reinerson_model_home",
-      title: "Reinerson Model Home",
-      description: "A model home designed for presentation, flow, and strong visual appeal.",
-      photoCount: 5
-    },
-    {
-      category: "PROJECT_PHOTOS",
-      label: "Project Photos",
-      id: "resley_patio",
-      title: "Resley Patio",
-      description: "An outdoor patio space styled for comfort, gathering, and a finished designer look.",
-      photoCount: 5
-    },
+    const PROJECTS = [
+      {
+        category: "PROJECT_PHOTOS",
+        label: "Project Photos",
+        id: "atc_model",
+        title: "ATC Model",
+        description: "A finished interior project with curated design details, styled spaces, and a polished Signature Mike look.",
+        photoCount: 5
+      },
+      {
+        category: "PROJECT_PHOTOS",
+        label: "Project Photos",
+        id: "davidson_bedroom",
+        title: "Davidson Bedroom",
+        description: "A bedroom project designed with comfort, balance, and layered interior styling.",
+        photoCount: 5
+      },
+      {
+        category: "PROJECT_PHOTOS",
+        label: "Project Photos",
+        id: "gloria_bath",
+        title: "Gloria Bath",
+        description: "A bathroom project with clean finishes, thoughtful details, and a refined final look.",
+        photoCount: 5
+      },
+      {
+        category: "PROJECT_PHOTOS",
+        label: "Project Photos",
+        id: "grant_foyer",
+        title: "Grant Foyer",
+        description: "A foyer design created to make a strong, elegant, and welcoming first impression.",
+        photoCount: 5
+      },
+      {
+        category: "PROJECT_PHOTOS",
+        label: "Project Photos",
+        id: "others",
+        title: "Others",
+        description: "Additional Signature Mike project photos, selected details, and finished design moments.",
+        photoCount: 5
+      },
+      {
+        category: "PROJECT_PHOTOS",
+        label: "Project Photos",
+        id: "pruitt_dining",
+        title: "Pruitt Dining",
+        description: "A dining room project with warm styling, finished details, and an inviting atmosphere.",
+        photoCount: 5
+      },
+      {
+        category: "PROJECT_PHOTOS",
+        label: "Project Photos",
+        id: "reinerson_model_home",
+        title: "Reinerson Model Home",
+        description: "A model home designed for presentation, flow, and strong visual appeal.",
+        photoCount: 5
+      },
+      {
+        category: "PROJECT_PHOTOS",
+        label: "Project Photos",
+        id: "resley_patio",
+        title: "Resley Patio",
+        description: "An outdoor patio space styled for comfort, gathering, and a finished designer look.",
+        photoCount: 5
+      },
 
-    {
-      category: "BEFORE_AND_AFTER",
-      label: "Before and After",
-      id: "1",
-      title: "Project 1",
-      description: "A before and after transformation showing the full design change.",
-      photoCount: 2
-    },
-    {
-      category: "BEFORE_AND_AFTER",
-      label: "Before and After",
-      id: "2",
-      title: "Project 2",
-      description: "A before and after transformation showing the full design change.",
-      photoCount: 2
-    },
-    {
-      category: "BEFORE_AND_AFTER",
-      label: "Before and After",
-      id: "3",
-      title: "Project 3",
-      description: "A before and after transformation showing the full design change.",
-      photoCount: 2
-    },
-    {
-      category: "BEFORE_AND_AFTER",
-      label: "Before and After",
-      id: "4",
-      title: "Project 4",
-      description: "A before and after transformation showing the full design change.",
-      photoCount: 2
-    },
-    {
-      category: "BEFORE_AND_AFTER",
-      label: "Before and After",
-      id: "5",
-      title: "Project 5",
-      description: "A before and after transformation showing the full design change.",
-      photoCount: 2
-    },
-    {
-      category: "BEFORE_AND_AFTER",
-      label: "Before and After",
-      id: "6",
-      title: "Project 6",
-      description: "A before and after transformation showing the full design change.",
-      photoCount: 2
-    },
-    {
-      category: "BEFORE_AND_AFTER",
-      label: "Before and After",
-      id: "7",
-      title: "Project 7",
-      description: "A before and after transformation showing the full design change.",
-      photoCount: 4
-    },
-    {
-      category: "BEFORE_AND_AFTER",
-      label: "Before and After",
-      id: "8",
-      title: "Project 8",
-      description: "A before and after transformation showing the full design change.",
-      photoCount: 4
-    },
-    {
-      category: "BEFORE_AND_AFTER",
-      label: "Before and After",
-      id: "9",
-      title: "Project 9",
-      description: "A before and after transformation showing the full design change.",
-      photoCount: 8
-    },
-    {
-      category: "BEFORE_AND_AFTER",
-      label: "Before and After",
-      id: "10",
-      title: "Project 10",
-      description: "A before and after transformation showing the full design change.",
-      photoCount: 2
-    },
-    {
-      category: "BEFORE_AND_AFTER",
-      label: "Before and After",
-      id: "11",
-      title: "Project 11",
-      description: "A before and after transformation showing the full design change.",
-      photoCount: 3
-    },
+      {
+        category: "BEFORE_AND_AFTER",
+        label: "Before and After",
+        id: "1",
+        title: "Project 1",
+        description: "A before and after transformation showing the full design change.",
+        photoCount: 2
+      },
+      {
+        category: "BEFORE_AND_AFTER",
+        label: "Before and After",
+        id: "2",
+        title: "Project 2",
+        description: "A before and after transformation showing the full design change.",
+        photoCount: 2
+      },
+      {
+        category: "BEFORE_AND_AFTER",
+        label: "Before and After",
+        id: "3",
+        title: "Project 3",
+        description: "A before and after transformation showing the full design change.",
+        photoCount: 2
+      },
+      {
+        category: "BEFORE_AND_AFTER",
+        label: "Before and After",
+        id: "4",
+        title: "Project 4",
+        description: "A before and after transformation showing the full design change.",
+        photoCount: 2
+      },
+      {
+        category: "BEFORE_AND_AFTER",
+        label: "Before and After",
+        id: "5",
+        title: "Project 5",
+        description: "A before and after transformation showing the full design change.",
+        photoCount: 2
+      },
+      {
+        category: "BEFORE_AND_AFTER",
+        label: "Before and After",
+        id: "6",
+        title: "Project 6",
+        description: "A before and after transformation showing the full design change.",
+        photoCount: 2
+      },
+      {
+        category: "BEFORE_AND_AFTER",
+        label: "Before and After",
+        id: "7",
+        title: "Project 7",
+        description: "A before and after transformation showing the full design change.",
+        photoCount: 4
+      },
+      {
+        category: "BEFORE_AND_AFTER",
+        label: "Before and After",
+        id: "8",
+        title: "Project 8",
+        description: "A before and after transformation showing the full design change.",
+        photoCount: 4
+      },
+      {
+        category: "BEFORE_AND_AFTER",
+        label: "Before and After",
+        id: "9",
+        title: "Project 9",
+        description: "A before and after transformation showing the full design change.",
+        photoCount: 8
+      },
+      {
+        category: "BEFORE_AND_AFTER",
+        label: "Before and After",
+        id: "10",
+        title: "Project 10",
+        description: "A before and after transformation showing the full design change.",
+        photoCount: 2
+      },
+      {
+        category: "BEFORE_AND_AFTER",
+        label: "Before and After",
+        id: "11",
+        title: "Project 11",
+        description: "A before and after transformation showing the full design change.",
+        photoCount: 3
+      },
 
-    {
-      category: "BEHIND_THE_SCENES",
-      label: "Behind the Scenes",
-      id: "behind_the_scenes_1",
-      title: "Behind the Scenes",
-      description: "A closer look at the styling, setup, and creative process behind Signature Mike projects.",
-      photoCount: 5
-    },
-    {
-      category: "BEHIND_THE_SCENES",
-      label: "Behind the Scenes",
-      id: "mike_headliner",
-      title: "Mike Headliner",
-      description: "Featured moments and images connected to the Signature Mike brand and creative work.",
-      photoCount: 5
-    },
+      {
+        category: "BEHIND_THE_SCENES",
+        label: "Behind the Scenes",
+        id: "behind_the_scenes_1",
+        title: "Behind the Scenes",
+        description: "A closer look at the styling, setup, and creative process behind Signature Mike projects.",
+        photoCount: 5
+      },
+      {
+        category: "BEHIND_THE_SCENES",
+        label: "Behind the Scenes",
+        id: "mike_headliner",
+        title: "Mike Headliner",
+        description: "Featured moments and images connected to the Signature Mike brand and creative work.",
+        photoCount: 5
+      },
 
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "airbnb_project",
-      title: "Airbnb Project",
-      description: "A short-term rental project styled for comfort, function, and visual appeal.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "atc_model_room",
-      title: "ATC Model Room",
-      description: "A model room design with warm details, polished styling, and a finished presentation.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "banks_patio",
-      title: "Banks Patio",
-      description: "An outdoor patio project with inviting details and a relaxed designer feel.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "bec_model_room",
-      title: "BEC Model Room",
-      description: "A model room project designed with a clean, welcoming, and finished look.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "bordeaux_steak_seafood",
-      title: "Bordeaux Steak & Seafood",
-      description: "A commercial dining space with rich atmosphere, layered textures, and elevated interior details.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "caret_guest_suite",
-      title: "Caret Guest Suite",
-      description: "A guest suite project styled for comfort, beauty, and a memorable stay.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "cianciulli_balcony",
-      title: "Cianciulli Balcony",
-      description: "A balcony design with thoughtful styling and an inviting outdoor feel.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "coca_cola_tournament_home",
-      title: "Coca Cola Tournament Home",
-      description: "A tournament home project created for comfort, style, and guest-ready presentation.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "davidson_living_room",
-      title: "Davidson Living Room",
-      description: "A living room design with balanced texture, comfort, and elegance.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "first_state_bank",
-      title: "First State Bank",
-      description: "A commercial interior project with a professional, clean, and refined design approach.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "frederick_home",
-      title: "Frederick Home",
-      description: "A residential project with carefully selected furnishings and layered interior details.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "gibbs_living_room",
-      title: "Gibbs Living Room",
-      description: "A living room design focused on comfort, personality, and polished styling.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "golf_tournament_guest_suites",
-      title: "Golf Tournament Guest Suites",
-      description: "Guest suites styled for a tournament setting with a refined and welcoming look.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "knox_living_room",
-      title: "Knox Living Room",
-      description: "A living room project with comfortable styling and thoughtful decorative details.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "libby_lee_bedroom",
-      title: "Libby Lee Bedroom",
-      description: "A bedroom design with soft details, comfort, and a finished designer feel.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "miller_theater",
-      title: "Miller Theater",
-      description: "A theater project with strong atmosphere, visual interest, and memorable interior details.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "mount_vintage_home",
-      title: "Mount Vintage Home",
-      description: "A home project with classic styling, layered textures, and refined design choices.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "resley_family_room",
-      title: "Resley Family Room",
-      description: "A family room designed for everyday comfort with a polished finished look.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "resley_office",
-      title: "Resley Office",
-      description: "A home office design with function, style, and a professional atmosphere.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "restley_closet",
-      title: "Restley Closet",
-      description: "A closet project focused on organization, presentation, and clean details.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "showroom_restroom",
-      title: "Showroom Restroom",
-      description: "A showroom restroom styled with a clean and elevated commercial finish.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "shuman_bedroom",
-      title: "Shuman Bedroom",
-      description: "A bedroom project with a calm, comfortable, and finished design direction.",
-      photoCount: 5
-    },
-    {
-      category: "MORE_PROJECTS",
-      label: "More Projects",
-      id: "signh_bedroom",
-      title: "Signh Bedroom",
-      description: "A bedroom project with thoughtful details and a clean designer presentation.",
-      photoCount: 5
-    }
-  ];
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "airbnb_project",
+        title: "Airbnb Project",
+        description: "A short-term rental project styled for comfort, function, and visual appeal.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "atc_model_room",
+        title: "ATC Model Room",
+        description: "A model room design with warm details, polished styling, and a finished presentation.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "banks_patio",
+        title: "Banks Patio",
+        description: "An outdoor patio project with inviting details and a relaxed designer feel.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "bec_model_room",
+        title: "BEC Model Room",
+        description: "A model room project designed with a clean, welcoming, and finished look.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "bordeaux_steak_seafood",
+        title: "Bordeaux Steak & Seafood",
+        description: "A commercial dining space with rich atmosphere, layered textures, and elevated interior details.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "caret_guest_suite",
+        title: "Caret Guest Suite",
+        description: "A guest suite project styled for comfort, beauty, and a memorable stay.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "cianciulli_balcony",
+        title: "Cianciulli Balcony",
+        description: "A balcony design with thoughtful styling and an inviting outdoor feel.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "coca_cola_tournament_home",
+        title: "Coca Cola Tournament Home",
+        description: "A tournament home project created for comfort, style, and guest-ready presentation.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "davidson_living_room",
+        title: "Davidson Living Room",
+        description: "A living room design with balanced texture, comfort, and elegance.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "first_state_bank",
+        title: "First State Bank",
+        description: "A commercial interior project with a professional, clean, and refined design approach.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "frederick_home",
+        title: "Frederick Home",
+        description: "A residential project with carefully selected furnishings and layered interior details.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "gibbs_living_room",
+        title: "Gibbs Living Room",
+        description: "A living room design focused on comfort, personality, and polished styling.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "golf_tournament_guest_suites",
+        title: "Golf Tournament Guest Suites",
+        description: "Guest suites styled for a tournament setting with a refined and welcoming look.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "knox_living_room",
+        title: "Knox Living Room",
+        description: "A living room project with comfortable styling and thoughtful decorative details.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "libby_lee_bedroom",
+        title: "Libby Lee Bedroom",
+        description: "A bedroom design with soft details, comfort, and a finished designer feel.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "miller_theater",
+        title: "Miller Theater",
+        description: "A theater project with strong atmosphere, visual interest, and memorable interior details.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "mount_vintage_home",
+        title: "Mount Vintage Home",
+        description: "A home project with classic styling, layered textures, and refined design choices.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "resley_family_room",
+        title: "Resley Family Room",
+        description: "A family room designed for everyday comfort with a polished finished look.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "resley_office",
+        title: "Resley Office",
+        description: "A home office design with function, style, and a professional atmosphere.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "restley_closet",
+        title: "Restley Closet",
+        description: "A closet project focused on organization, presentation, and clean details.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "showroom_restroom",
+        title: "Showroom Restroom",
+        description: "A showroom restroom styled with a clean and elevated commercial finish.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "shuman_bedroom",
+        title: "Shuman Bedroom",
+        description: "A bedroom project with a calm, comfortable, and finished design direction.",
+        photoCount: 5
+      },
+      {
+        category: "MORE_PROJECTS",
+        label: "More Projects",
+        id: "signh_bedroom",
+        title: "Signh Bedroom",
+        description: "A bedroom project with thoughtful details and a clean designer presentation.",
+        photoCount: 5
+      }
+    ];
 
-  const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search);
 
-  const urlCategory = params.get("category");
-  const urlId = params.get("id");
-  const urlTitle = params.get("title");
+    const urlCategory = params.get("category");
+    const urlId = params.get("id");
+    const urlTitle = params.get("title");
 
-  const projectLabel = document.getElementById("projectLabel");
-  const projectTitle = document.getElementById("projectTitle");
-  const projectDescription = document.getElementById("projectDescription");
-  const projectGallery = document.getElementById("projectGallery");
-  const projectError = document.getElementById("projectError");
-  const projectErrorText = document.getElementById("projectErrorText");
+    const projectLabel = document.getElementById("projectLabel");
+    const projectTitle = document.getElementById("projectTitle");
+    const projectDescription = document.getElementById("projectDescription");
+    const projectGallery = document.getElementById("projectGallery");
+    const projectError = document.getElementById("projectError");
+    const projectErrorText = document.getElementById("projectErrorText");
 
-  function clean(value) {
-    return String(value || "").trim();
-  }
-
-  function buildImagePath(project, index) {
-    const number = String(index).padStart(3, "0");
-
-    if (project.category === "BEFORE_AND_AFTER") {
-      const paddedId = String(project.id).padStart(2, "0");
-      return `assets/BEFORE_AND_AFTER/${project.id}/before_after_${paddedId}_${number}.jpeg`;
+    function clean(value) {
+      return String(value || "").trim();
     }
 
-    return `assets/${project.category}/${project.id}/${project.id}_${number}.jpeg`;
-  }
+    function buildImagePath(project, index) {
+      const number = String(index).padStart(3, "0");
 
-  function showError(message) {
-    projectGallery.hidden = true;
-    projectError.hidden = false;
+      if (project.category === "BEFORE_AND_AFTER") {
+        const paddedId = String(project.id).padStart(2, "0");
+        return `assets/BEFORE_AND_AFTER/${project.id}/before_after_${paddedId}_${number}.jpeg`;
+      }
 
-    projectLabel.textContent = "Portfolio";
-    projectTitle.textContent = urlTitle || "Project Not Found";
-    projectDescription.textContent = "This project could not be found.";
-    projectErrorText.textContent = message;
+      return `assets/${project.category}/${project.id}/${project.id}_${number}.jpeg`;
+    }
 
-    console.error(message);
-  }
+    function showError(message) {
+      projectGallery.hidden = true;
+      projectError.hidden = false;
 
-  function renderProject(project) {
-    document.title = `${project.title} | Signature Mike`;
+      projectLabel.textContent = "Portfolio";
+      projectTitle.textContent = urlTitle || "Project Not Found";
+      projectDescription.textContent = "This project could not be found.";
+      projectErrorText.textContent = message;
 
-    projectLabel.textContent = project.label;
-    projectTitle.textContent = project.title;
-    projectDescription.textContent = project.description;
+      console.error(message);
+    }
 
-    projectGallery.hidden = false;
-    projectError.hidden = true;
+    function renderProject(project) {
+      document.title = `${project.title} | Signature Mike`;
 
-    let photoHTML = "";
+      projectLabel.textContent = project.label;
+      projectTitle.textContent = project.title;
+      projectDescription.textContent = project.description;
 
-    for (let i = 1; i <= project.photoCount; i++) {
-      const imagePath = buildImagePath(project, i);
+      projectGallery.hidden = false;
+      projectError.hidden = true;
 
-      photoHTML += `
+      let photoHTML = "";
+
+      for (let i = 1; i <= project.photoCount; i++) {
+        const imagePath = buildImagePath(project, i);
+
+        photoHTML += `
         <figure class="project-detail-photo">
           <img src="${imagePath}" alt="${project.title} photo ${i}" loading="lazy">
         </figure>
       `;
+      }
+
+      projectGallery.innerHTML = photoHTML;
     }
 
-    projectGallery.innerHTML = photoHTML;
-  }
+    function loadProject() {
+      if (!urlCategory || !urlId) {
+        showError("The URL is missing category or id.");
+        return;
+      }
 
-  function loadProject() {
-    if (!urlCategory || !urlId) {
-      showError("The URL is missing category or id.");
-      return;
+      const project = PROJECTS.find(item => {
+        return clean(item.category) === clean(urlCategory) &&
+          clean(item.id) === clean(urlId);
+      });
+
+      if (!project) {
+        showError(`No project matches category="${urlCategory}" and id="${urlId}".`);
+        return;
+      }
+
+      renderProject(project);
     }
 
-    const project = PROJECTS.find(item => {
-      return clean(item.category) === clean(urlCategory) &&
-             clean(item.id) === clean(urlId);
-    });
-
-    if (!project) {
-      showError(`No project matches category="${urlCategory}" and id="${urlId}".`);
-      return;
-    }
-
-    renderProject(project);
-  }
-
-  loadProject();
-</script>
+    loadProject();
+  </script>
 </body>
+
 </html>

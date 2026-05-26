@@ -1,20 +1,26 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | Signature Mike</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="index.html">
-        <span class="brand__name">Signature Mike</span>
+      <a class="brand brand--logo" href="index.html" aria-label="Signature Mike Home">
+        <img src="assets/signature_mike_logo.png" alt="Signature Mike" class="brand__logo">
       </a>
+
       <button class="navbtn" id="navBtn">Menu</button>
       <nav class="nav" id="nav">
         <a class="nav__link" href="index.html">Home</a>
@@ -22,6 +28,7 @@
         <a class="nav__link" href="about.html" style="color: var(--accent-light);">About</a>
         <a class="nav__link" href="services.html">Services</a>
         <a class="nav__link" href="contact.html">Contact</a>
+        <a class="nav__link nav__link--show" href="signature-mike-show.html">Signature Mike Show</a>
       </nav>
     </div>
   </header>
@@ -36,108 +43,141 @@
       <div class="container split">
         <div class="split__content">
           <p class="p">
-            Signature Mike is a familiar face in Augusta, Georgia. His business, Signature Interiors, has continued growing since moving there in 2005 from Washington DC. The store is packed with furniture, art, lamps, chandeliers, rugs, home decor and gifts.
+            Signature Mike is a familiar face in Augusta, Georgia. His business, Signature Interiors, has continued
+            growing since moving there in 2005 from Washington DC. The store is packed with furniture, art, lamps,
+            chandeliers, rugs, home decor and gifts.
           </p>
           <p class="p">
-            Mike and his staff work with many clients around the globe, from new home construction to redecorating, residential or commercial. Mike writes a weekly design column for the Augusta Press. His weekday TV show also airs on YouTube.
+            Mike and his staff work with many clients around the globe, from new home construction to redecorating,
+            residential or commercial. Mike writes a weekly design column for the Augusta Press. His weekday TV show
+            also airs on YouTube.
           </p>
-          <h3 style="font-family: var(--serif); font-weight: 300; font-size: 24px; color: var(--accent); margin-top: 32px;">Design Philosophy</h3>
+          <h3
+            style="font-family: var(--serif); font-weight: 300; font-size: 24px; color: var(--accent); margin-top: 32px;">
+            Design Philosophy</h3>
           <p class="p">
-            Mike is fluent in every design language. He travels to markets, keeps up with trends, and uses vast resources to find the perfect fit for every client. The goal is a space that reflects the client’s lifestyle.
+            Mike is fluent in every design language. He travels to markets, keeps up with trends, and uses vast
+            resources to find the perfect fit for every client. The goal is a space that reflects the client’s
+            lifestyle.
           </p>
-          <h3 style="font-family: var(--serif); font-weight: 300; font-size: 24px; color: var(--accent); margin-top: 32px;">Awards</h3>
+          <h3
+            style="font-family: var(--serif); font-weight: 300; font-size: 24px; color: var(--accent); margin-top: 32px;">
+            Awards</h3>
           <p class="p">
-            Mike has won several national awards for interior design work in the Washington DC area. Voted #1 interior design in Columbia County, GA for seven years.
+            Mike has been recognized for his interior design work and has been voted #1 Interior Designer in Columbia
+            County, GA for seven years.
           </p>
         </div>
         <div class="split__media">
-          <img src="assets/mike-siewert-cover.png" alt="Michael Siewert" style="width: 100%; aspect-ratio: 3/4; object-fit: cover;" />
+          <img src="assets/mike-siewert-cover.png" alt="Michael Siewert"
+            style="width: 100%; aspect-ratio: 3/4; object-fit: cover;" />
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-  <div class="container">
-    <a class="footer-brand" href="index.html">Signature Mike</a>
+    <div class="container">
+      <a class="footer-brand" href="index.html">Signature Mike</a>
 
-    <div class="footer-grid footer-grid--newsletter">
-      <div>
-        <h3 class="footer-title">Explore</h3>
-        <ul class="footer-links">
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <div class="footer-grid footer-grid--newsletter">
+        <div>
+          <h3 class="footer-title">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="signature-mike-show.html">Signature Mike Show</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
 
-      <div>
-        <h3 class="footer-title">Company</h3>
-        <ul class="footer-links">
-          <li><a href="press.html">Press</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="terms-of-use.html">Terms of Use</a></li>
-        </ul>
-      </div>
+        <div>
+          <h3 class="footer-title">Company</h3>
+          <ul class="footer-links">
+            <li><a href="press.html">Press</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+          </ul>
+        </div>
 
-      <div>
-        <h3 class="footer-title">Visit Us</h3>
-        <p class="footer-contact">
-          3505 Professional Circle<br />
-          Augusta, GA 30907<br />
-          In the Shops On Furys Ferry<br /><br />
-          <a href="mailto:Mike@SignatureMike.com">Mike@SignatureMike.com</a><br />
-          <a href="tel:+17064471503">706-447-1503</a>
-        </p>
-      </div>
+        <div>
+          <h3 class="footer-title">Visit Us</h3>
 
-      <div>
-        <h3 class="footer-title">Newsletter</h3>
-        <p class="footer-newsletter-text">
-          Subscribe for design updates, project highlights, store news, and special Signature Mike announcements.
-        </p>
+          <p class="footer-contact">
+            <a href="https://www.google.com/maps/search/?api=1&query=3505+Professional+Circle+Augusta+GA+30907"
+              target="_blank" rel="noopener">
+              3505 Professional Circle<br />
+              Augusta, GA 30907<br />
+              In the Shops On Furys Ferry
+            </a>
+            <br /><br />
 
-        <form
-          class="footer-newsletter"
-          name="newsletter"
-          method="POST"
-          data-netlify="true"
-        >
-          <input type="hidden" name="form-name" value="newsletter" />
+            <a href="mailto:Mike@SignatureMike.com">Mike@SignatureMike.com</a><br />
+            <a href="tel:+17064471503">706-447-1503</a>
+          </p>
 
-          <label class="sr-only" for="newsletterEmail">Email Address</label>
+          <div class="footer-socials" aria-label="Signature Mike social links">
+            <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
 
-          <div class="footer-newsletter__row">
-            <input
-              id="newsletterEmail"
-              class="footer-newsletter__input"
-              type="email"
-              name="email"
-              placeholder="Email address"
-              required
-            />
+            <a href="#" aria-label="TikTok" target="_blank" rel="noopener">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
 
-            <button class="footer-newsletter__button" type="submit">
-              Sign Up
-            </button>
+            <a href="https://www.youtube.com/@signaturemike6053" aria-label="YouTube" target="_blank" rel="noopener">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" aria-label="X" target="_blank" rel="noopener">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
           </div>
-        </form>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Newsletter</h3>
+          <p class="footer-newsletter-text">
+            Subscribe for design updates, project highlights, store news, show features, and special Signature Mike
+            announcements.
+          </p>
+
+          <form class="footer-newsletter" name="newsletter" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="newsletter" />
+
+            <label class="sr-only" for="newsletterEmail">Email Address</label>
+
+            <div class="footer-newsletter__row">
+              <input id="newsletterEmail" class="footer-newsletter__input" type="email" name="email"
+                placeholder="Email address" required />
+
+              <button class="footer-newsletter__button" type="submit">
+                Sign Up
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <span>
+          &copy; <span id="year"></span>
+          <a href="index.html">Signature Mike</a>. All rights reserved.
+        </span>
+
+        <span>
+          Designed and developed by
+          <a href="https://www.jcorales.art" target="_blank" rel="noopener">JCorales Creative</a>.
+        </span>
       </div>
     </div>
-
-    <div class="footer-divider"></div>
-
-    <div class="footer-bottom">
-      <span>&copy; <span id="year"></span> Signature Mike. All rights reserved.</span>
-      <span>
-        Designed and developed by
-        <a href="https://www.jcorales.art" style="color: rgb(226, 177, 43);" target="_blank">JCorales Creative</a>.
-      </span>
-    </div>
-  </div>
-</footer>
+  </footer>
   <script src="script.js"></script>
 </body>
+
 </html>
