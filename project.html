@@ -608,6 +608,22 @@
     }
 
     loadProject();
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll("img");
+
+    images.forEach(function (img) {
+      img.addEventListener("error", function () {
+        const removableParent = img.closest("figure, .project-gallery__item, .gallery-item, .show-stack__slide, .project-image");
+
+        if (removableParent) {
+          removableParent.remove();
+        } else {
+          img.remove();
+        }
+      });
+    });
+  });
   </script>
 </body>
 
