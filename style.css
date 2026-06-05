@@ -1803,6 +1803,461 @@ a {
   }
 }
 /* =========================================
+   PRESS PAGE
+========================================= */
+
+.press-tv-hero {
+  padding-bottom: 96px;
+}
+
+.press-tv-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.press-tv-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.press-tv-card {
+  padding: 40px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.press-tv-meta {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.press-tv-meta__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.press-tv-meta__row i {
+  color: var(--accent-light);
+  width: 16px;
+  flex-shrink: 0;
+}
+
+/* Newsletter archive grid */
+
+.newsletter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.newsletter-card {
+  display: block;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  text-decoration: none;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.newsletter-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.newsletter-card__thumb {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.newsletter-card__thumb img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.newsletter-card:hover .newsletter-card__thumb img {
+  transform: scale(1.04);
+}
+
+.newsletter-card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 5px 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.newsletter-card__body {
+  padding: 24px;
+}
+
+.newsletter-card__month {
+  margin-bottom: 8px;
+  color: var(--accent-light);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.newsletter-card__title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.newsletter-card__cta {
+  font-size: 13px;
+  color: var(--accent-light);
+  font-weight: 500;
+}
+
+/* Press signup section */
+
+.press-signup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.press-signup__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.press-signup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.press-signup__row {
+  display: flex;
+  gap: 0;
+}
+
+.press-signup__input {
+  flex: 1;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-right: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.press-signup__input:focus {
+  border-color: var(--accent);
+}
+
+.press-signup__button {
+  white-space: nowrap;
+  padding: 16px 28px;
+}
+
+.press-signup__note {
+  margin: 0;
+  color: rgba(26, 21, 37, 0.5);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   NEWSLETTER DETAIL PAGE
+========================================= */
+
+.nl-hero {
+  padding-bottom: 80px;
+}
+
+.nl-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 64px;
+  align-items: start;
+  margin-top: 8px;
+}
+
+.nl-hero__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  min-width: 200px;
+}
+
+.nl-hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.nl-hero__stat:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.nl-hero__num {
+  font-family: var(--serif);
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.nl-hero__label {
+  color: rgba(26, 21, 37, 0.55);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.nl-hero__yt {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nl-hero__yt:hover {
+  color: var(--accent-light);
+}
+
+.nl-hero__yt i {
+  font-size: 20px;
+  color: #FF0000;
+}
+
+/* Newsletter highlights grid */
+
+.nl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 32px;
+}
+
+.nl-card {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.nl-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.nl-card__thumb-wrap {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.nl-card__thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.nl-card:hover .nl-card__thumb {
+  transform: scale(1.04);
+}
+
+.nl-card__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.nl-card__play i {
+  font-size: 52px;
+  color: #ffffff;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+}
+
+.nl-card:hover .nl-card__play {
+  opacity: 1;
+}
+
+.nl-card__ep {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  padding: 4px 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nl-card__body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.nl-card__tag {
+  margin-bottom: 10px;
+  color: var(--accent-light);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.nl-card__title {
+  margin: 0 0 14px;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 22px;
+  color: var(--accent);
+  line-height: 1.25;
+}
+
+.nl-card__desc {
+  margin: 0 0 20px;
+  color: rgba(26, 21, 37, 0.75);
+  font-size: 14px;
+  line-height: 1.8;
+  flex: 1;
+}
+
+.nl-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: auto;
+  transition: color 0.2s;
+}
+
+.nl-card__link i {
+  color: #FF0000;
+  font-size: 15px;
+}
+
+.nl-card__link:hover {
+  color: var(--accent-light);
+}
+
+.nl-footer-cta {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  align-items: center;
+  margin-top: 80px;
+  padding: 56px;
+  background: var(--tint);
+}
+
+/* Responsive — press & newsletter */
+
+@media (max-width: 980px) {
+  .press-tv-grid,
+  .press-signup {
+    grid-template-columns: 1fr;
+  }
+
+  .nl-hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .nl-hero__meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: auto;
+  }
+
+  .nl-hero__stat {
+    flex: 1;
+    min-width: 120px;
+    padding-bottom: 0;
+    border-bottom: none;
+    padding-right: 20px;
+    border-right: 1px solid var(--line);
+  }
+
+  .nl-hero__stat:last-child {
+    border-right: none;
+  }
+
+  .nl-footer-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 680px) {
+  .nl-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nl-footer-cta {
+    padding: 32px 24px;
+  }
+
+  .press-tv-card,
+  .press-signup__input {
+    padding: 24px;
+  }
+}
+
+/* =========================================
    Signature Mike Show - Dual Square Slideshow
 ========================================= */
 

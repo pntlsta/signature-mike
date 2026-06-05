@@ -21,9 +21,7 @@
       <a class="brand brand--logo" href="index.html" aria-label="Signature Mike Home">
         <img src="assets/signature_mike_logo.png" alt="Signature Mike" class="brand__logo">
       </a>
-
       <button class="navbtn" id="navBtn">Menu</button>
-
       <nav class="nav" id="nav">
         <a class="nav__link" href="index.html">Home</a>
         <a class="nav__link" href="portfolio.html">Portfolio</a>
@@ -36,81 +34,117 @@
   </header>
 
   <main>
-    <section class="section section--tint">
-      <div class="container section__head">
-        <div class="eyebrow">Press</div>
-        <h1 class="h2">In the News</h1>
-        <p class="p">
-          Signature Mike and The Signature Mike Show have been featured across television, print, and digital media.
-          For press inquiries, contact <a href="mailto:Mike@SignatureMike.com" style="color: var(--accent-light); text-decoration: underline;">Mike@SignatureMike.com</a>.
-        </p>
-      </div>
-    </section>
 
-    <section class="section">
+    <!-- SECTION 1: TELEVISION -->
+    <section class="section section--tint press-tv-hero">
       <div class="container">
-        <div class="split" style="margin-bottom: 80px;">
-          <div class="split__content">
-            <div class="eyebrow">Television</div>
-            <h2 class="h2">The Signature Mike Show</h2>
+        <div class="eyebrow">Press &amp; Television</div>
+        <div class="press-tv-grid">
+          <div class="press-tv-content">
+            <h1 class="h2">The Signature Mike Show</h1>
             <p class="p">
-              The Signature Mike Show airs every Tuesday, Wednesday, and Thursday at 3 PM on WRDW-TV from Augusta,
-              Georgia. The 30-minute lifestyle and interior design program features design ideas, creative crafts,
-              community stories, local business spotlights, and Mike's on-location adventures in the CSRA.
+              Airing every <strong>Tuesday, Wednesday &amp; Thursday at 3 PM</strong> on
+              <strong>WRDW-TV</strong> (CBS Channel 12, Augusta, Georgia), The Signature Mike Show is a
+              30-minute lifestyle and interior design program hosted by Michael Siewert. Each episode brings
+              together practical design ideas, creative crafts, community stories, local business features,
+              and Signature Mike's on-location adventures across the CSRA.
             </p>
-            <div style="margin-top: 32px;">
-              <a class="btn btn--primary" href="signature-mike-show.html">Learn About the Show</a>
+            <p class="p" style="margin-top: 20px;">
+              For press inquiries or interview requests, contact
+              <a href="mailto:Mike@SignatureMike.com" style="color:var(--accent-light);text-decoration:underline;">Mike@SignatureMike.com</a>.
+            </p>
+            <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:32px;">
+              <a class="btn btn--primary" href="signature-mike-show.html">About the Show</a>
+              <a class="btn btn--outline" href="https://www.youtube.com/@signaturemike6053/videos" target="_blank" rel="noopener">Watch on YouTube</a>
             </div>
           </div>
-          <div class="split__media">
+          <div class="press-tv-card">
             <img src="assets/SIGNATURE_MIKE_SHOW/show_logo.png" alt="The Signature Mike Show"
-              style="width: 100%; max-width: 400px; object-fit: contain;"
-              onerror="this.closest('.split__media').style.display='none'">
-          </div>
-        </div>
-
-        <div class="section__head">
-          <div class="eyebrow">Media &amp; Features</div>
-          <h2 class="h2">Coverage &amp; Recognition</h2>
-          <p class="p">
-            Signature Mike's interior design work and television presence have earned recognition in the Augusta area and beyond.
-          </p>
-        </div>
-
-        <div class="serviceRow" style="margin-top: 0;">
-          <article class="service">
-            <div class="service__title">WRDW-TV</div>
-            <div class="service__line">The Signature Mike Show airs Tuesday, Wednesday, and Thursday at 3 PM on WRDW-TV, Augusta's CBS affiliate.</div>
-          </article>
-          <article class="service">
-            <div class="service__title">Interior Design</div>
-            <div class="service__line">Signature Mike's residential and commercial projects have been featured in local publications and media covering Augusta-area design.</div>
-          </article>
-          <article class="service">
-            <div class="service__title">Community</div>
-            <div class="service__line">From local nonprofits to Augusta businesses, Signature Mike has built a reputation for community engagement and creative design leadership.</div>
-          </article>
-        </div>
-
-        <div style="margin-top: 80px; padding: 56px; background: var(--tint); text-align: center;">
-          <div class="eyebrow">Press Contact</div>
-          <h2 class="h2" style="margin-top: 16px;">Media Inquiries</h2>
-          <p class="p" style="margin: 0 auto 32px; text-align: center;">
-            For press inquiries, interview requests, media kits, or feature opportunities, reach out directly.
-          </p>
-          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-            <a class="btn btn--primary" href="mailto:Mike@SignatureMike.com">Email for Press</a>
-            <a class="btn btn--outline" href="contact.html">Contact Page</a>
+              style="width:100%;max-width:340px;object-fit:contain;display:block;margin:0 auto 24px;"
+              onerror="this.style.display='none'">
+            <div class="press-tv-meta">
+              <div class="press-tv-meta__row">
+                <i class="fa-solid fa-tv"></i>
+                WRDW-TV &nbsp;&middot;&nbsp; CBS Channel 12
+              </div>
+              <div class="press-tv-meta__row">
+                <i class="fa-regular fa-clock"></i>
+                Tuesday &middot; Wednesday &middot; Thursday at 3:00 PM
+              </div>
+              <div class="press-tv-meta__row">
+                <i class="fa-solid fa-location-dot"></i>
+                Augusta, Georgia &mdash; CSRA
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- SECTION 2: MONTHLY NEWSLETTERS -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div class="eyebrow">Monthly Newsletters</div>
+          <h2 class="h2">From the Show</h2>
+          <p class="p">
+            Each month we round up the best highlights, design moments, community stories, and guest features
+            from The Signature Mike Show. Click a newsletter to read the full recap.
+          </p>
+        </div>
+
+        <div class="newsletter-grid">
+
+          <a class="newsletter-card" href="newsletter-may-2026.html">
+            <div class="newsletter-card__thumb">
+              <img
+                src="https://img.youtube.com/vi/KH3PJkczxEs/hqdefault.jpg"
+                alt="May 2026 — The Signature Mike Show highlights"
+                onerror="this.src='assets/SIGNATURE_MIKE_SHOW/show_photo.png'">
+              <div class="newsletter-card__badge">May 2026</div>
+            </div>
+            <div class="newsletter-card__body">
+              <div class="newsletter-card__month">May 2026</div>
+              <div class="newsletter-card__title">Design Tips, Local Guests &amp; On-Location Adventures</div>
+              <div class="newsletter-card__cta">8 episode highlights &rarr;</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: NEWSLETTER SIGNUP -->
+    <section class="section section--tint">
+      <div class="container press-signup">
+        <div class="press-signup__content">
+          <div class="eyebrow">Stay in the Loop</div>
+          <h2 class="h2">Sign Up for my monthly Newsletter!</h2>
+          <p class="p">
+            Get design highlights, show recaps, local guest features, and Signature Mike announcements
+            delivered straight to your inbox every month.
+          </p>
+        </div>
+        <form class="press-signup__form" name="press-newsletter" method="POST"
+          data-netlify="true" netlify-honeypot="bot-field" action="/newsletter-success">
+          <input type="hidden" name="form-name" value="press-newsletter" />
+          <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
+          <label class="sr-only" for="pressEmail">Email Address</label>
+          <div class="press-signup__row">
+            <input id="pressEmail" class="press-signup__input" type="email" name="email"
+              placeholder="Your email address" required />
+            <button class="press-signup__button btn btn--primary" type="submit">Subscribe</button>
+          </div>
+          <p class="press-signup__note">No spam. Just design, community, and show highlights once a month.</p>
+        </form>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <a class="footer-brand" href="index.html">Signature Mike</a>
-
       <div class="footer-grid footer-grid--newsletter">
         <div>
           <h3 class="footer-title">Explore</h3>
@@ -123,7 +157,6 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
         <div>
           <h3 class="footer-title">Company</h3>
           <ul class="footer-links">
@@ -133,84 +166,51 @@
             <li><a href="terms-of-use.html">Terms of Use</a></li>
           </ul>
         </div>
-
         <div>
           <h3 class="footer-title">Visit Us</h3>
-
           <p class="footer-contact">
             <a href="https://www.google.com/maps/search/?api=1&query=3505+Professional+Circle+Augusta+GA+30907"
               target="_blank" rel="noopener">
-              3505 Professional Circle<br>
-              Augusta, GA 30907<br>
-              In the Shops On Furys Ferry
+              3505 Professional Circle<br>Augusta, GA 30907<br>In the Shops On Furys Ferry
             </a>
             <br><br>
-
             <a href="mailto:Mike@SignatureMike.com">Mike@SignatureMike.com</a><br>
             <a href="tel:+17064471503">706-447-1503</a>
           </p>
-
           <div class="footer-socials" aria-label="Signature Mike social links">
-            <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-
-            <a href="#" aria-label="TikTok" target="_blank" rel="noopener">
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
-
-            <a href="https://www.youtube.com/@signaturemike6053" aria-label="YouTube" target="_blank" rel="noopener">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-
-            <a href="#" aria-label="X" target="_blank" rel="noopener">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
+            <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@signaturemike6053" aria-label="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="X" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
           </div>
         </div>
-
         <div>
           <h3 class="footer-title">Newsletter</h3>
           <p class="footer-newsletter-text">
-            Subscribe for design updates, project highlights, store news, show features, and special Signature Mike
-            announcements.
+            Subscribe for design updates, project highlights, store news, show features, and special
+            Signature Mike announcements.
           </p>
-
-          <form class="footer-newsletter" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/newsletter-success">
-            <input type="hidden" name="form-name" value="newsletter">
-            <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
-
+          <form class="footer-newsletter" name="newsletter" method="POST" data-netlify="true"
+            netlify-honeypot="bot-field" action="/newsletter-success">
+            <input type="hidden" name="form-name" value="newsletter" />
+            <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
             <label class="sr-only" for="newsletterEmail">Email Address</label>
-
             <div class="footer-newsletter__row">
               <input id="newsletterEmail" class="footer-newsletter__input" type="email" name="email"
-                placeholder="Email address" required>
-
-              <button class="footer-newsletter__button" type="submit">
-                Sign Up
-              </button>
+                placeholder="Email address" required />
+              <button class="footer-newsletter__button" type="submit">Sign Up</button>
             </div>
           </form>
         </div>
       </div>
-
       <div class="footer-divider"></div>
-
       <div class="footer-bottom">
-        <span>
-          &copy; <span id="year"></span>
-          <a href="index.html">Signature Mike</a>. All rights reserved.
-        </span>
-
-        <span>
-          Designed and developed by
-          <a href="https://www.jcorales.art" target="_blank" rel="noopener">JCorales Creative</a>.
-        </span>
+        <span>&copy; <span id="year"></span> <a href="index.html">Signature Mike</a>. All rights reserved.</span>
+        <span>Designed and developed by <a href="https://www.jcorales.art" target="_blank" rel="noopener">JCorales Creative</a>.</span>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
