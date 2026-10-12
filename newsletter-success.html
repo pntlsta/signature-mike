@@ -5,15 +5,66 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>You're Subscribed | Signature Mike</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="assets/sm_icon.png">
+  <style>
+    .success {
+      display: flex;
+      align-items: center;
+      min-height: calc(100vh - 220px);
+      padding: 96px 0;
+      background: var(--tint);
+    }
+
+    .success__inner {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .success__mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      margin-bottom: 32px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 26px;
+    }
+
+    .success__title {
+      margin: 0 0 24px;
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(36px, 4.5vw, 60px);
+      line-height: 1.1;
+      color: var(--accent);
+    }
+
+    .success__lead {
+      margin: 0 auto 40px;
+      max-width: 52ch;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+
+    .success__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+  </style>
 </head>
 
 <body>
@@ -22,9 +73,7 @@
       <a class="brand brand--logo" href="index.html" aria-label="Signature Mike Home">
         <img src="assets/signature_mike_logo.png" alt="Signature Mike" class="brand__logo">
       </a>
-
       <button class="navbtn" id="navBtn">Menu</button>
-
       <nav class="nav" id="nav">
         <a class="nav__link" href="index.html">Home</a>
         <a class="nav__link" href="portfolio.html">Portfolio</a>
@@ -37,15 +86,26 @@
   </header>
 
   <main>
-    <section class="section section--tint">
-      <div class="container section__head" style="text-align: center; padding-top: 80px; padding-bottom: 80px;">
-        <div class="eyebrow">Newsletter</div>
-        <h1 class="h2">You're on the list!</h1>
-        <p class="p" style="max-width: 520px; margin: 0 auto 32px;">
-          Thank you for subscribing. You'll be the first to know about design updates, project highlights, store news,
-          show features, and special Signature Mike announcements.
-        </p>
-        <a href="index.html" class="btn btn--primary">Back to Home</a>
+    <section class="success">
+      <div class="container">
+        <div class="success__inner">
+          <div class="success__mark" aria-hidden="true">
+            <i class="fa-solid fa-envelope-open"></i>
+          </div>
+
+          <div class="eyebrow">Newsletter</div>
+          <h1 class="success__title">You're on the list.</h1>
+
+          <p class="success__lead">
+            Thank you for subscribing. You'll be the first to hear about design updates, project
+            highlights, store news, show features, and special Signature Mike announcements.
+          </p>
+
+          <div class="success__actions">
+            <a class="btn btn--primary" href="index.html">Back to Home</a>
+            <a class="btn btn--outline" href="portfolio.html">View Portfolio</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -54,7 +114,7 @@
     <div class="container">
       <a class="footer-brand" href="index.html">Signature Mike</a>
 
-      <div class="footer-grid footer-grid--newsletter">
+      <div class="footer-grid">
         <div>
           <h3 class="footer-title">Explore</h3>
           <ul class="footer-links">
@@ -110,28 +170,6 @@
               <i class="fa-brands fa-x-twitter"></i>
             </a>
           </div>
-        </div>
-
-        <div>
-          <h3 class="footer-title">Newsletter</h3>
-          <p class="footer-newsletter-text">
-            Subscribe for design updates, project highlights, store news, show features, and special Signature Mike
-            announcements.
-          </p>
-
-          <form class="footer-newsletter" method="POST" action="https://formspree.io/f/mvznjnqw">
-            <input type="hidden" name="_next" value="http://michaelsiewert.com/newsletter-success.html">
-            <label class="sr-only" for="newsletterEmail">Email Address</label>
-
-            <div class="footer-newsletter__row">
-              <input id="newsletterEmail" class="footer-newsletter__input" type="email" name="email"
-                placeholder="Email address" required />
-
-              <button class="footer-newsletter__button" type="submit">
-                Sign Up
-              </button>
-            </div>
-          </form>
         </div>
       </div>
 
