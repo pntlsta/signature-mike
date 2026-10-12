@@ -2384,6 +2384,83 @@ a {
   }
 }
 
+/* SPONSOR SECTION */
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.sponsor-card {
+  --sponsor-logo-h: 110px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 40px 32px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  text-align: center;
+}
+
+.sponsor-card__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--sponsor-logo-h);
+  margin-bottom: 28px;
+}
+
+/* Cap in px, not %: a percentage max-height does not resolve against the box */
+.sponsor-card__logo img {
+  width: auto;
+  max-width: 190px;
+  max-height: var(--sponsor-logo-h);
+  object-fit: contain;
+}
+
+.sponsor-card__name {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.sponsor-card__detail {
+  margin: 0 0 28px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.sponsor-card__meta {
+  margin: auto 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: rgba(26, 21, 37, 0.7);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.sponsor-card__meta a {
+  color: var(--accent-light);
+}
+
+.sponsor-card__hours {
+  display: block;
+  margin-top: 10px;
+  color: rgba(26, 21, 37, 0.55);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 980px) {
+  .sponsor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* SPONSOR BAR */
 
 :root {
