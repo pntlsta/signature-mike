@@ -130,21 +130,24 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       name: "F&M Bank",
       detail: "Community Banking · Augusta, GA",
-      logo: "assets/SPONSOR_LOGOS/fnm-bank.png"
+      logo: "assets/SPONSOR_LOGOS/fnm-bank.png",
+      url: "https://www.fmbanknow.com/location-hours/martinez/"
     },
     {
       name: "Taylor BMW",
       detail: "Sales & Service · Evans, GA",
-      logo: "assets/SPONSOR_LOGOS/taylor-bmw.png"
+      logo: "assets/SPONSOR_LOGOS/taylor-bmw.png",
+      url: "https://www.taylorbmw.com/"
     },
     {
       name: "Hardwood Floors & More",
       detail: "Flooring & Installation · Evans, GA",
-      logo: "assets/SPONSOR_LOGOS/hfm.png"
+      logo: "assets/SPONSOR_LOGOS/hfm.png",
+      url: "https://www.hardwoodfloorsandmoreinc.com/"
     }
   ];
 
-  const ROTATE_MS = 10000;
+  const ROTATE_MS = 3500;
 
   if (!SPONSORS.length || document.querySelector(".sponsor-bar")) return;
 
@@ -170,8 +173,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttons = [];
 
   SPONSORS.forEach((sponsor, index) => {
-    const slide = document.createElement("article");
+    const slide = document.createElement(sponsor.url ? "a" : "article");
     slide.className = "sponsor-slide";
+
+    if (sponsor.url) {
+      slide.href = sponsor.url;
+      slide.target = "_blank";
+      slide.rel = "noopener";
+    }
 
     const logo = document.createElement("img");
     logo.className = "sponsor-slide__logo";
